@@ -31,7 +31,10 @@ class Card
   	self.suit = suit
   	self.facevalue = facevalue
   end
-
+  
+  def self.random_card(suit, facevalue)
+    Card.new(suit.values[rand(suit.size)], facevalue.values[rand(facevalue.size)])
+  end
 end
 
 class Deck
@@ -43,8 +46,7 @@ class Deck
 
     card_suit.each do |i|
       card_facevalue.each do |j|
-        @card = Card.new(i, j)
-        @deck << [@card]
+        @deck << Card.new(i, j)
       end
     end 
   end
@@ -54,28 +56,31 @@ class Deck
   end
 
   def deal
-    z = @deck.first
-    puts z.inspect
-    @deck.delete(z)
+    z = @deck.shift
+    puts z.suit
   end
+
 end
 
-test = Deck.new(card_suits, card_facevalues)
+card = Card.random_card(card_suits, card_facevalues)
+deck = Deck.new(card_suits, card_facevalues)
 
-#puts test.inspect
+#puts deck.inspect
 
-#test.shuffle
+#deck.shuffle
 
 
 s = 0
 while s <= 52
   puts s
-  test.deal
+  deck.deal
   s += 1
 end
 
 
-=begin
-card = Card.new(card_suits.values[rand(card_suits.size)], card_facevalues.values[rand(card_facevalues.size)])
+puts card.inspect
 puts "#{card.facevalue} of #{card.suit}"
-=end
+
+
+
+
