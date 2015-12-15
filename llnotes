@@ -1,0 +1,122 @@
+class Stack
+  attr_reader :head # head
+
+  def initialize
+   @head = nil
+  end
+
+  def push(value)
+    l1 = LinkedListNode.new(value, @head)
+    # l1 -> @head
+    @head = l1
+  end
+
+  def pop
+    #
+  end
+end
+
+l1->l2->l3
+
+def reverse_list(list)
+  #
+
+  while list
+    #
+    list = list.next_node
+  end
+
+  #
+end
+node3.push(36)
+node3 = LinkedListNode.new(37)
+node2 = LinkedListNode.new(99, node3)
+node1 = LinkedListNode.new(12, node2)
+
+print_values(node1)
+
+#node3.push(23)
+
+Stack => [ LinkedListNode , LinkedListNode, LinkedListNode, @data #HEAD]
+  
+  s = Stack.new 
+  => [ @data = nil ]
+  s.push(1) 
+  => [ l1 = LinkedListNode.new(1)]
+  s.push(2)
+
+  
+  
+  
+LinkedListNode.push xxx
+Stack.push
+  
+  Stack.new => [@data = nil]
+
+  class Stack
+  attr_reader :head # head
+
+  def initialize
+   @head = nil
+  end
+
+  def push(value)
+    l1 = LinkedListNode.new(value, @head)
+    # l1 -> @head
+    @head = l1
+  end
+
+  def pop
+    # how to take the book on the top of the bucket?
+    l1 = @head
+    @head = @head.next_node
+    l1
+  end
+end
+
+def reverse_list(list)
+  #
+
+  while list
+    #
+    list = list.next_node
+  end
+
+  #
+end
+
+
+
+node3.push(36)
+node3 = LinkedListNode.new(37)
+node2 = LinkedListNode.new(99, node3)
+node1 = LinkedListNode.new(12, node2)
+
+print_values(node1)
+
+#node3.push(23)
+
+Stack => [ LinkedListNode , LinkedListNode, LinkedListNode, @data #HEAD]
+  
+  s = Stack.new 
+  => [ @data = nil ]
+  s.push(1) 
+  => [ l1 = LinkedListNode.new(1)]
+  s.push(2)
+  s.push(3)
+  => l3 -> l2 -> l1
+  l3 = s.pop
+  => l2 -> l1
+  s.pop
+  => l1
+  s.push(4)
+  => l4 -> l1
+
+  
+  
+  
+LinkedListNode.push xxx
+Stack.push
+  
+Stack.new => [@data = nil]
+=end
